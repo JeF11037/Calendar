@@ -2,11 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calendar.March"
-             Title="March"
-             BackgroundColor="white">
+             BackgroundColor="#f3a8bc"
+             Title="March">
 
-    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="blue">
-        <Image Source="test.gif" />
-    </StackLayout>
-    
 </ContentPage>
