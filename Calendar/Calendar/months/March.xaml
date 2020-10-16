@@ -5,4 +5,14 @@
              BackgroundColor="#f3a8bc"
              Title="March">
 
+    <StackLayout x:Name="stack">
+
+        <Image Source="spring.png" Aspect="AspectFill" Scale="1.5"/>
+        <Image.GestureRecognizers>
+            <TapGestureRecognizer
+            Tapped="TapGestureRecognizer_Tapped"/>
+        </Image.GestureRecognizers>
+
+    </StackLayout>
+
 </ContentPage>
