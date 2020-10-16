@@ -2,11 +2,40 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calendar.March"
+             BackgroundColor="#f3a8bc"
              Title="March"
-             BackgroundColor="white">
+             xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar">
 
-    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="blue">
-        <Image Source="test.gif" />
+    <StackLayout x:Name="stack">
+
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+
+            <Frame VerticalOptions="Start" BackgroundColor="Wheat" Margin="50">
+                <Image Source="spring.png" Aspect="AspectFill" Scale="1" x:Name="mainImg"/>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Image.GestureRecognizers>
+            </Frame>
+
+            <controls:Calendar
+                x:Name="cld"
+                Padding="10,10,10,10"
+                Scale="1"
+                HorizontalOptions="Center"
+                VerticalOptions="StartAndExpand"
+                Margin="2"
+                SelectedBorderWidth="4"
+                DisabledBorderColor="Black"
+                ShowNumberOfWeek="false"
+                StartDay="Monday"
+                WeekdaysShow="False"
+                StartDate="03.01.2020"
+                TitleLabelTextColor="Purple"
+                TitleLeftArrowIsVisible="False"
+                TitleRightArrowIsVisible="False"/>
+
+        </StackLayout>
+
     </StackLayout>
-    
+
 </ContentPage>

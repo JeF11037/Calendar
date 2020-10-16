@@ -2,12 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calendar.July"
+             BackgroundColor="#15b2d3"
              Title="July">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <StackLayout x:Name="stack"
+                 xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar">
+
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+
+            <Frame VerticalOptions="Start" BackgroundColor="Wheat" Margin="50">
+                <Image Source="summer2.png" Aspect="AspectFill" Scale="1" x:Name="mainImg"/>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Image.GestureRecognizers>
+            </Frame>
+
+            <controls:Calendar
+                                x:Name="cld"
+                Padding="10,10,10,10"
+                Scale="1"
+                HorizontalOptions="Center"
+                VerticalOptions="StartAndExpand"
+                Margin="2"
+                SelectedBorderWidth="4"
+                DisabledBorderColor="Black"
+                ShowNumberOfWeek="false"
+                StartDay="Monday"
+                WeekdaysShow="False"
+                StartDate="07.01.2020"
+                TitleLabelTextColor="Purple"
+                TitleLeftArrowIsVisible="False"
+                TitleRightArrowIsVisible="False"/>
+
         </StackLayout>
-    </ContentPage.Content>
+
+    </StackLayout>
+
 </ContentPage>
