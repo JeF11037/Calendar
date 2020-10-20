@@ -28,7 +28,7 @@
                 DisabledBorderColor="Black"
                 ShowNumberOfWeek="false"
                 StartDay="Monday"
-                StartDate="08.01.2020"
+                StartDate="10.01.2020"
                 TitleLabelTextColor="Purple"
                 TitleLeftArrowIsVisible="False"
                 TitleRightArrowIsVisible="False"/>
